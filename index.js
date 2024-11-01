@@ -41,7 +41,6 @@ const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 const previewButton = document.getElementById("preview-btn");
 
-
 let currentQuestionIndex = 0;
 let score = 0;
 
@@ -72,6 +71,11 @@ function ShowQuestion() {
 
 function resetState() {
   nextButton.style.display = "none";
+  if (currentQuestionIndex == 0 || currentQuestionIndex == questions.length) {
+    previewButton.style.display = "none";
+  }else{
+    previewButton.style.display = "block";
+  }
   while (answerButtons.firstChild) {
     answerButtons.removeChild(answerButtons.firstChild);
   }
@@ -93,6 +97,8 @@ function selectAnswer(e) {
     button.disabled = true;
   });
   nextButton.style.display = "block";
+  // previewButton.style.display = "block";
+
 }
 
 function ShowScore() {
@@ -111,9 +117,22 @@ function handleNextButton() {
   }
 }
 
+function handlePreviousButton() {
+  --currentQuestionIndex;
+  ShowQuestion();
+}
+
 nextButton.addEventListener("click", () => {
   if (currentQuestionIndex < questions.length) {
     handleNextButton();
+  } else {
+    startQuiz();
+  }
+});
+
+previewButton.addEventListener("click", () => {
+  if (currentQuestionIndex > 0) {
+    handlePreviousButton();
   } else {
     startQuiz();
   }
