@@ -1,16 +1,14 @@
 # Contexte du projet
+
 Vous travaillez pour une plateforme d'apprentissage en ligne, et votre mission est de créer un petit quiz interactif pour tester les connaissances des utilisateurs sur un sujet. L'application doit offrir une navigation intuitive, avec un retour visuel une fois que l'utilisateur termine le quiz, ainsi que le calcul et l'affichage du score final.
 
 ​
 
-# Fonctionnalités requises
-
-​
+# Fonctionnalités requises​
 
 Affichage des questions :
 Chaque question est affichée sur une page distincte avec une seule réponse possible.
 L'utilisateur peut voir une seule question à la fois.
-​
 
 Navigation entre les questions :
 Bouton Suivant : permet de passer à la question suivante.
@@ -21,9 +19,6 @@ Lorsqu'il est sur la dernière question, le bouton Suivant est remplacé par un 
 
 Calcul et affichage du score :
 Lorsqu'il clique sur Terminer, le score de l'utilisateur est calculé en fonction de ses réponses. Une page de résultats s'affiche avec le score final et un message récapitulatif.
-​
-
-​
 
 # Histoires utilisateur
 
@@ -45,8 +40,6 @@ Sauvegarde de la progression : les réponses sont sauvegardées dans le Local St
 ​
 
 # Technologies utilisées
-
-​
 
 HTML pour la structure du quiz.
 Bootstrap / TailwindCSS ou CSS pour le style et la mise en page.
